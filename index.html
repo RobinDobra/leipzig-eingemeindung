@@ -1,17 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
    <head>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
     </head>
-	 
+   <meta charset="utf-8">
+
 <body>
- <pre><code class="language-mermaid">graph LR
-A--&gt;B
+
+<pre><code class="language-mermaid">
+mindmap
+  root((Leipzig))
+    1890 eingemeindet nach
+      Reudnitz
+      Anger Crottendorf
+      Neureudnitz
+      Thonberg
+      Neuschönefeld
+    1891 eingemeindet nach
+      Kleinzschocher
+      Schleußig
+      Plagwitz
+      Lindenau
+      Connewitz
+      Lößnig
+   1892 eingemeindet nach
+      Neusellerhausen
+   1904 eingemeindet nach
+      Rittergut Lößnig
+   1909 eingemeindet nach
+      Rittergut Kleinzschocher
+   1910 eingemeindet nach
+      Probstheida
+      Stötteritz
+      Stünz
+      Dölitz mit Meusdorf
+      Dösen
+      Mölkau
+         xyz verschmolzen zu
+            Mölkau
+            Zweinaundorf
+      Möckern
 </code></pre>
 
-<div class="mermaid">graph LR
-A--&gt;B
-</div>
+ <pre><code class="language-mermaid">
+    %%{init:{'flowchart':{'nodeSpacing': 1}}}%%
+    flowchart LR
+
+    %% Mölkau
+    MölkauAlt[Mölkau] -->|200| eingemeindetNachMölkau{{zusammengelegt zu}}
+    Zweinaundorf[Zweinaundorf] -->|100| eingemeindetNachMölkau{{zusammengelegt zu}}
+    eingemeindetNachMölkau{{zusammengelegt zu}} --> MölkauNeu[Mölkau]
+
+    %% Leipzig Eingemeindung 1890
+    Reudnitz[Reudnitz] --> |1| 1890{{1890 eingemeindet nach}}
+    AngerCrottendorf[Anger Crottendorf] --> |10.782| 1890{{1890 eingemeindet nach}}
+    Neureudnitz[Neureudnitz] --> |1| 1890{{1890 eingemeindet nach}}
+    Thonberg[Thonberg] --> |1| 1890{{1890 eingemeindet nach}}
+    Neuschönefeld[Neuschönefeld] --> |1| 1890{{1890 eingemeindet nach}}
+    Neustadt[Neustadt] --> |1| 1890{{1890 eingemeindet nach}}
+    Volkmarsdorf[Volkmarsdorf] --> |1| 1890{{1890 eingemeindet nach}}
+    Sellerhausen[Sellerhausen] --> |1| 1890{{1890 eingemeindet nach}}
+    Gohlis[Gohlis] --> |1| 1890{{1890 eingemeindet nach}}
+    Eutritzsch[Eutritzsch] --> |7.612| 1890{{1890 eingemeindet nach}}
+    1890{{1890 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1891
+    Kleinzschocher[Kleinzschocher] --> |1| 1891{{1891 eingemeindet nach}}
+    Schleußig[Schleußig] --> |1| 1891{{1891 eingemeindet nach}}
+    Plagwitz[Plagwitz] --> |1| 1891{{1891 eingemeindet nach}}
+    Lindenau[Lindenau] --> |1| 1891{{1891 eingemeindet nach}}
+    Connewitz[Connewitz] --> |10.596| 1891{{1891 eingemeindet nach}}
+    Lößnig[Lößnig] --> |1| 1891{{1891 eingemeindet nach}}
+    1891{{1891 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1892
+    Neusellerhausen[Neusellerhausen] --> |1| 1892{{1892 eingemeindet nach}}
+    1892{{1892 eingemeindet nach}} --> Leipzig[Leipzig]
+
+
+    %% Leipzig Eingemeindung 1904
+    RittergutLößnig[Rittergut Lößnig] --> |1| 1904{{1904 eingemeindet nach}}
+    1904{{1904 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1909
+    RittergutKleinzschocher[Rittergut Kleinzschocher] --> |1| 1909{{1909 eingemeindet nach}}
+    1909{{1909 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1910
+    Probstheida[Probstheida] --> |1| 1910{{1910 eingemeindet nach}}
+    Stötteritz[Stötteritz] --> |1| 1910{{1910 eingemeindet nach}}
+    Stünz[Stünz] --> |1| 1910{{1910 eingemeindet nach}}
+    DölitzmitMeusdorf[Dölitz mit Meusdorf] --> |1| 1910{{1910 eingemeindet nach}}
+    Dösen[Dösen] --> |1| 1910{{1910 eingemeindet nach}}
+    Möckern[Möckern] --> |1| 1910{{1910 eingemeindet nach}}
+    1910{{1910 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1915
+    Schönefeld[Schönefeld] --> |1| 1915{{1915 eingemeindet nach}}
+    Mockau[Mockau] --> |1| 1915{{1915 eingemeindet nach}}
+    1915{{1915 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1922
+    Großzschocher/Windorf[Großzschocher/Windorf] --> |1| 1922{{1922 eingemeindet nach}}
+    Leutzsch[Leutzsch] --> |1| 1922{{1922 eingemeindet nach}}
+    Paunsdorf[Paunsdorf] --> |1| 1922{{1922 eingemeindet nach}}
+    Wahren[Wahren] --> |1| 1922{{1922 eingemeindet nach}}
+    1922{{1922 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1930
+    Abtnaundorf[Abtnaundorf] --> |1| 1930{{1930 eingemeindet nach}}
+    Knautkleeberg[Knautkleeberg] --> |1| 1930{{1930 eingemeindet nach}}
+    Schönau[Schönau] --> |1| 1930{{1930 eingemeindet nach}}
+    Thekla[Thekla] --> |1| 1930{{1930 eingemeindet nach}}
+    1930{{1930 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1935
+    Portitz[Portitz] --> |1| 1935{{1935 eingemeindet nach}}
+    1935{{1935 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1936
+    Knauthain[Knauthain] --> |1| 1936{{1936 eingemeindet nach}}
+    Lauer[Lauer] --> |1| 1936{{1936 eingemeindet nach}}
+    1936{{1936 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1993
+    Hartmannsdorf[Hartmannsdorf] --> |1| 1993{{1993 eingemeindet nach}}
+    1993{{1993 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1995
+    Lausen[Lausen] --> |405| 1995{{1955 eingemeindet nach}}
+    Plaußig[Plaußig] --> |1| 1995{{1955 eingemeindet nach}}
+    1995{{1995 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1997
+    SeehausenmitHohenheida,GöbschelwitzundGottscheina[Seehausen mit Hohenheida,
+    Göbschelwitz und Gottscheina] --> |1| 1997{{1997 eingemeindet nach}}
+    1997{{1997 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1998
+    Podelwitz-Süd[ 	Podelwitz-Süd] --> |1| 1998{{1998 eingemeindet nach}}
+    1998{{1998 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 1999
+    Böhlitz-Ehrenberg[Böhlitz-Ehrenberg] --> |1| 1999{{1999 eingemeindet nach}}
+    EngelsdorfmitAlthen,Baalsdorf,Hirschfeld,KleinpösnaundSommerfeld[Engelsdorf mit Althen, Baalsdorf,
+    Hirschfeld, Kleinpösna und Sommerfeld] --> |1| 1999{{1999 eingemeindet nach}}
+    Holzhausen[Holzhausen] --> |1| 1999{{1999 eingemeindet nach}}
+    Liebertwolkwitz[Liebertwolkwitz] --> |1| 1999{{1999 eingemeindet nach}}
+    Lindenthal[Lindenthal] --> |1| 1999{{1999 eingemeindet nach}}
+    Lützschena-Stahmeln[Lützschena-Stahmeln] --> |1| 1999{{1999 eingemeindet nach}}
+    Miltitz[Miltitz] --> |1.369| 1999{{1999 eingemeindet nach}}
+    MölkauNeu[Mölkau] --> |1| 1999{{1999 eingemeindet nach}}
+    Wiederitzsch[Wiederitzsch] --> |1| 1999{{1999 eingemeindet nach}}
+    Rehbach[Rehbach] --> |1| 1999{{1999 eingemeindet nach}}
+    Knautnaundorf[Knautnaundorf] --> |1| 1999{{1999 eingemeindet nach}}
+    Radefeld-Süd[Radefeld-Süd] --> |1| 1999{{1999 eingemeindet nach}}
+    1999{{1999 eingemeindet nach}} --> Leipzig[Leipzig]
+
+    %% Leipzig Eingemeindung 2000
+    Burghausen[Burghausen] --> |1| 2000{{2000 eingemeindet nach}}
+    Rückmarsdorf[Rückmarsdorf] --> |1| 2000{{2000 eingemeindet nach}}
+    2000{{2000 eingemeindet nach}} --> Leipzig[Leipzig]
+</code></pre>
 	
 </body>
 <script>
